@@ -1,6 +1,7 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
+using Entities.Concrete;
 using System;
 
 namespace ConsoleUI
@@ -26,6 +27,9 @@ namespace ConsoleUI
                 Console.WriteLine(color.ColorId);
             }
 
+            carManager.Add(new Car { CarId=3,CarName="MERCEDES", BrandId=3, ColorId=3, DailyPrice=1500, ModelYear=2020, Description= "Mercedes E Kiralık Otomobil" });
+            brandManager.Add(new Brand {BrandId=3, BrandName="Mercedes" });
+            colorManager.Add(new Color {ColorId=3, ColorName="Siyah"});
         }
     }
 }
