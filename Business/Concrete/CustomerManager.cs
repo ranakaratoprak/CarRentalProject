@@ -34,9 +34,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Customer>>(_customerDal.GetAll());
         }
 
-        public Customer GetById(int customerId)
+        public IDataResult<Customer> GetById(int customerId)
         {
-            return _customerDal.Get(b => b.UserId == customerId);
+            return new SuccessDataResult<Customer>(_customerDal.Get(b => b.UserId == customerId));
         }
 
         public IResult Update(Customer customer)
