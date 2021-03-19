@@ -28,21 +28,21 @@ namespace ConsoleUI
 
             Console.WriteLine("------------------------");
 
-            BrandManager brandManager = new BrandManager(new EfBrandDal());
-            Console.WriteLine(brandManager.GetById(1).BrandName);
+            //BrandManager brandManager = new BrandManager(new EfBrandDal());
+            //Console.WriteLine(brandManager.GetById(1).BrandName);
 
-            Console.WriteLine("------------------------");
+            //Console.WriteLine("------------------------");
 
-            ColorManager colorManager = new ColorManager(new EfColorDal());
-            foreach (var color in colorManager.GetAll().Data)
-            {
-                Console.WriteLine(color.ColorId);
-            }
+            //ColorManager colorManager = new ColorManager(new EfColorDal());
+            //foreach (var color in colorManager.GetAll().Data)
+            //{
+            //    Console.WriteLine(color.ColorId);
+            //}
 
             //UserManager userManager = new UserManager(new EfUserDal());
-            //userManager.Add(new User {UserId=2, FirstName = "Yılmazeren", LastName = "Karatoprak", Email = "yılmazeren@hotmail.com", Password = "23651"});
-            
-            //carManager.Add(new Car { CarId=3,CarName="MERCEDES", BrandId=3, ColorId=3, DailyPrice=1500, ModelYear=2020, Description= "Mercedes E Kiralık Otomobil" });
+            //userManager.Add(new User {{UserId=2, FirstName = "Yılmazeren", LastName = "Karatoprak", Email = "yılmazeren@hotmail.com", Password = "23651"});
+
+            //carManager.Add(new Car { CarId=3, CarName="MERCEDES", BrandId=3, ColorId=3, DailyPrice=1500, ModelYear=2020, Description= "Mercedes E Kiralık Otomobil" });
             //brandManager.Add(new Brand {BrandId=3, BrandName="Mercedes" });
             //colorManager.Add(new Color {ColorId=3, ColorName="Siyah"});
         }
