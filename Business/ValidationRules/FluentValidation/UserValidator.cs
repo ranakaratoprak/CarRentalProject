@@ -1,4 +1,4 @@
-﻿using Entities.Concrete;
+﻿using Core.Entities.Concrete;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -16,8 +16,7 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(p => p.LastName).MinimumLength(2).WithMessage("Soyisminiz 2 veya daha fazla harften oluşmalıdır.");
             RuleFor(p => p.Email).NotEmpty();
             RuleFor(p => p.Email).Must(ContainEmailSign);
-            RuleFor(p => p.Password).NotEmpty();
-            RuleFor(p => p.Password).MinimumLength(8).WithMessage("Şifreniz 8 veya daha fazla karakterden oluşmalıdır.");
+
         }
 
         private bool ContainEmailSign(string arg)
